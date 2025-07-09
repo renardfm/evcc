@@ -49,21 +49,21 @@ render: |
     - source: modbus
       {{- include "modbus" . | indent 4 }}
       register:
-        address: 613 # "Out-of-grid - current A"
+        address: 630 # "Out-of-grid - current A"
         type: holding
         decode: int16
       scale: 0.01
     - source: modbus
       {{- include "modbus" . | indent 4 }}
       register:
-        address: 614 # "Out-of-grid - current B"
+        address: 631 # "Out-of-grid - current B"
         type: holding
         decode: int16
       scale: 0.01
     - source: modbus
       {{- include "modbus" . | indent 4 }}
       register:
-        address: 615 # "Out-of-grid - current C"
+        address: 632 # "Out-of-grid - current C"
         type: holding
         decode: int16
       scale: 0.01
@@ -120,7 +120,7 @@ render: |
     register:
       address: 518 # "Total discharge of the battery (Wh)"
       type: holding
-      decode: uint32s
+      decode: uint16
     scale: 0.1
   soc:
     source: modbus
